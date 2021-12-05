@@ -8,19 +8,20 @@
         placement="bottom"
         :width="320"
         trigger="click"
-        popper-class="popper-user-box"
-      >
+        popper-class="popper-user-box">
         <template #reference>
           <div class="author">
             <i class="icon el-icon-s-custom" />
-            {{ "admin" }}
+            {{ 'admin' }}
             <i class="el-icon-caret-bottom" />
           </div>
         </template>
         <div class="nickname">
-          <p>登录名：{{ "admin" }}</p>
-          <p>昵称：{{ "admin" }}</p>
-          <el-tag size="small" effect="dark" class="logout" @click="logout">退出</el-tag>
+          <p>登录名：{{ 'admin' }}</p>
+          <p>昵称：{{ 'admin' }}</p>
+          <el-tag size="small" effect="dark" class="logout" @click="logout"
+            >退出</el-tag
+          >
         </div>
       </el-popover>
     </div>
@@ -28,20 +29,19 @@
 </template>
 
 <script>
-import { useRouter } from "vue-router"
+import { useRouter } from 'vue-router'
 export default {
-  name: "Header",
+  name: 'D-Header',
   setup() {
     const router = useRouter()
-
     const logout = () => {
-      router.push("/login")
+      router.push('/login')
     }
 
     return {
-      logout,
+      logout
     }
-  },
+  }
 }
 </script>
 
@@ -71,8 +71,8 @@ export default {
 </style>
 <style>
 .popper-user-box {
-  background: url("https://s.yezgea02.com/lingling-h5/static/account-banner-bg.png") 50%
-    50% no-repeat !important;
+  background: url('https://s.yezgea02.com/lingling-h5/static/account-banner-bg.png')
+    50% 50% no-repeat !important;
   background-size: cover !important;
   border-radius: 0 !important;
 }
