@@ -1,11 +1,8 @@
 <template>
   <div class="login-body">
+    <div class="change-lang" @click="changeLang">切换语言</div>
     <div class="login-container">
-      <div class="head">
-        <div class="name">
-          <div class="tips">Vue3.0 后台管理系统</div>
-        </div>
-      </div>
+      <div class="head">Vue3.0</div>
       <el-form
         label-position="top"
         @keyup.enter="submitForm"
@@ -13,26 +10,22 @@
         :model="ruleForm"
         ref="loginForm"
         class="login-form">
-        <el-form-item label="账号" prop="username">
+        <el-form-item :label="$t('login.account')" prop="username">
           <el-input
             type="text"
             v-model.trim="ruleForm.username"
             autocomplete="off"></el-input>
         </el-form-item>
-        <el-form-item label="密码" prop="password">
+        <el-form-item :label="$t('login.pwd')" prop="password">
           <el-input
             type="password"
             v-model.trim="ruleForm.password"
             autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item>
-          <div style="color: #333">登录表示您已同意<a>《服务条款》</a></div>
-          <el-button style="width: 100%" type="primary" @click="submitForm"
-            >立即登录</el-button
-          >
-          <el-checkbox v-model="checked" @change="!checked"
-            >下次自动登录</el-checkbox
-          >
+          <el-button class="login-btn" type="primary" @click="submitForm">{{
+            $t('login.submit')
+          }}</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -42,12 +35,15 @@
 <script>
 import { reactive, ref, toRefs } from 'vue'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 export default {
   name: 'Login',
   setup() {
     const router = useRouter()
     const appName = ref(null)
     const loginForm = ref(null)
+
+    const { locale } = useI18n()
     const state = reactive({
       ruleForm: {
         username: 'admin',
@@ -72,12 +68,24 @@ export default {
     const resetForm = () => {
       loginForm.value.resetFields()
     }
+
+    const changeLang = () => {
+      let lang = ['zh', 'en']
+
+      let currentLang = localStorage.getItem('lang') || 'zh'
+
+      let setLang = lang[Number(!lang.findIndex(v => v === currentLang))]
+
+      localStorage.setItem('lang', setLang)
+      locale.value = setLang
+    }
     return {
       ...toRefs(state),
       loginForm,
       submitForm,
       resetForm,
-      appName
+      appName,
+      changeLang
     }
   }
 }
@@ -92,9 +100,15 @@ export default {
   height: 100vh;
   background-image: linear-gradient(25deg, #077f7c, #3aa693, #5ecfaa, #7ffac2);
 }
+.change-lang {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  cursor: pointer;
+}
 .login-container {
   width: 420px;
-  height: 500px;
+  height: 400px;
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0px 21px 41px 0px rgba(0, 0, 0, 0.2);
@@ -105,18 +119,13 @@ export default {
   align-items: center;
   padding: 40px 0 20px 0;
 }
-.head img {
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
-}
-.head .tips {
-  font-size: 12px;
-  color: #999;
-}
 .login-form {
   width: 70%;
   margin: 0 auto;
+}
+.login-btn {
+  width: 100%;
+  margin-top: 10px;
 }
 </style>
 <style>
