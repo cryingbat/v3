@@ -790,6 +790,16 @@
   "resolved" "https://registry.nlark.com/escape-string-regexp/download/escape-string-regexp-4.0.0.tgz"
   "version" "4.0.0"
 
+"eslint-plugin-vue@^8.2.0":
+  "integrity" "sha512-cLIdTuOAMXyHeQ4drYKcZfoyzdwdBpH279X8/N0DgmotEI9yFKb5O/cAgoie/CkQZCH/MOmh0xw/KEfS90zY2A=="
+  "resolved" "https://registry.npmmirror.com/eslint-plugin-vue/download/eslint-plugin-vue-8.2.0.tgz"
+  "version" "8.2.0"
+  dependencies:
+    "eslint-utils" "^3.0.0"
+    "natural-compare" "^1.4.0"
+    "semver" "^7.3.5"
+    "vue-eslint-parser" "^8.0.1"
+
 "eslint-scope@^5.1.1":
   "integrity" "sha1-54blmmbLkrP2wfsNUIqrF0hI9Iw="
   "resolved" "https://registry.npmmirror.com/eslint-scope/download/eslint-scope-5.1.1.tgz?cache=0&sync_timestamp=1637466963861&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Feslint-scope%2Fdownload%2Feslint-scope-5.1.1.tgz"
@@ -797,6 +807,14 @@
   dependencies:
     "esrecurse" "^4.3.0"
     "estraverse" "^4.1.1"
+
+"eslint-scope@^6.0.0":
+  "integrity" "sha1-nPRbE8Wsjz1MUPRqUSH2Gz4xiXg="
+  "resolved" "https://registry.npmmirror.com/eslint-scope/download/eslint-scope-6.0.0.tgz?cache=0&sync_timestamp=1637466963861&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Feslint-scope%2Fdownload%2Feslint-scope-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "esrecurse" "^4.3.0"
+    "estraverse" "^5.2.0"
 
 "eslint-scope@^7.1.0":
   "integrity" "sha512-aWwkhnS0qAXqNOgKOK0dJ2nvzEbhEvpy8OlJ9kZ0FeZnA6zpjv1/Vei+puGFFX7zkPCkHHXb7IDX3A+7yPrRWg=="
@@ -818,12 +836,17 @@
   "resolved" "https://registry.npmmirror.com/eslint-visitor-keys/download/eslint-visitor-keys-2.1.0.tgz?cache=0&sync_timestamp=1636378420914&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Feslint-visitor-keys%2Fdownload%2Feslint-visitor-keys-2.1.0.tgz"
   "version" "2.1.0"
 
+"eslint-visitor-keys@^3.0.0":
+  "integrity" "sha512-yWJFpu4DtjsWKkt5GeNBBuZMlNcYVs6vRCLoCVEJrTjaSB6LC98gFipNK/erM2Heg/E8mIK+hXG/pJMLK+eRZA=="
+  "resolved" "https://registry.npmmirror.com/eslint-visitor-keys/download/eslint-visitor-keys-3.1.0.tgz?cache=0&sync_timestamp=1636378420914&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Feslint-visitor-keys%2Fdownload%2Feslint-visitor-keys-3.1.0.tgz"
+  "version" "3.1.0"
+
 "eslint-visitor-keys@^3.1.0":
   "integrity" "sha512-yWJFpu4DtjsWKkt5GeNBBuZMlNcYVs6vRCLoCVEJrTjaSB6LC98gFipNK/erM2Heg/E8mIK+hXG/pJMLK+eRZA=="
   "resolved" "https://registry.npmmirror.com/eslint-visitor-keys/download/eslint-visitor-keys-3.1.0.tgz?cache=0&sync_timestamp=1636378420914&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Feslint-visitor-keys%2Fdownload%2Feslint-visitor-keys-3.1.0.tgz"
   "version" "3.1.0"
 
-"eslint@^7.5.0 || ^8.0.0", "eslint@^8.3.0", "eslint@>=5":
+"eslint@^6.2.0 || ^7.0.0 || ^8.0.0", "eslint@^7.5.0 || ^8.0.0", "eslint@^8.3.0", "eslint@>=5", "eslint@>=6.0.0":
   "integrity" "sha512-kv0XQcAQJL/VD9THQKhTQZVqkJKA+tIj/v2ZKNaIHRAADcJWFb+B/BAewUYuF6UVg1s2xC5qXVoDk0G8sKGeTA=="
   "resolved" "https://registry.npmmirror.com/eslint/download/eslint-8.4.0.tgz"
   "version" "8.4.0"
@@ -867,7 +890,7 @@
     "text-table" "^0.2.0"
     "v8-compile-cache" "^2.0.3"
 
-"espree@^9.2.0":
+"espree@^9.0.0", "espree@^9.2.0":
   "integrity" "sha512-oP3utRkynpZWF/F2x/HZJ+AGtnIclaR7z1pYPxy7NYM2fSO6LgK/Rkny8anRSPK/VwEA1eqm2squui0T7ZMOBg=="
   "resolved" "https://registry.npmmirror.com/espree/download/espree-9.2.0.tgz"
   "version" "9.2.0"
@@ -1492,6 +1515,13 @@
   dependencies:
     "lru-cache" "^6.0.0"
 
+"semver@^7.3.5":
+  "integrity" "sha1-C2Ich5NI2JmOSw5L6Us/EuYBjvc="
+  "resolved" "https://registry.nlark.com/semver/download/semver-7.3.5.tgz?cache=0&sync_timestamp=1624607961409&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fsemver%2Fdownload%2Fsemver-7.3.5.tgz"
+  "version" "7.3.5"
+  dependencies:
+    "lru-cache" "^6.0.0"
+
 "sentence-case@^3.0.4":
   "integrity" "sha1-NkWnuMEXx4f96HAgViJbtipFEx8="
   "resolved" "https://registry.nlark.com/sentence-case/download/sentence-case-3.0.4.tgz"
@@ -1684,6 +1714,19 @@
   "integrity" "sha1-9+GO++z/0RqwadFHLXoG4xm0F0w="
   "resolved" "https://registry.npmmirror.com/vue-demi/download/vue-demi-0.12.1.tgz"
   "version" "0.12.1"
+
+"vue-eslint-parser@^8.0.1":
+  "integrity" "sha1-JeCLIKQUVRUx8+GfmZkC4ez0XxM="
+  "resolved" "https://registry.npmmirror.com/vue-eslint-parser/download/vue-eslint-parser-8.0.1.tgz"
+  "version" "8.0.1"
+  dependencies:
+    "debug" "^4.3.2"
+    "eslint-scope" "^6.0.0"
+    "eslint-visitor-keys" "^3.0.0"
+    "espree" "^9.0.0"
+    "esquery" "^1.4.0"
+    "lodash" "^4.17.21"
+    "semver" "^7.3.5"
 
 "vue-i18n@^9.1.2":
   "integrity" "sha1-y1PgarXMW37tWTMvFRyvSNR76bs="

@@ -6,12 +6,17 @@ module.exports = {
     browser: true,
     commonjs: true
   },
-  extends: ['plugin:vue/vue3-strongly-recommended', '@vue/standard'],
-  parser: '@babel/eslint-parser',
+  extends: [
+    'plugin:vue/vue3-essential',
+    'plugin:vue/vue3-strongly-recommended'
+  ],
   parserOptions: {
+    parser: '@babel/eslint-parser',
+    requireConfigFile: false,
     sourceType: 'module'
   },
   rules: {
+    'vue/singleline-html-element-content-newline': 0,
     'comma-dangle': [
       'error',
       {

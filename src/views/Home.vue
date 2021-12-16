@@ -23,7 +23,10 @@ export default defineComponent({
     Header,
     Footer
   },
-  setup() {}
+
+  setup(context, props) {
+    console.log(context, props)
+  }
 })
 </script>
 <style scoped>
