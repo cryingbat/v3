@@ -17,7 +17,7 @@ root_path=`pwd`
 lint_cmd="node node_modules/eslint/bin/eslint.js "
 exit_code=0
 
-for file in $add_files_list;do
+for file in $add_files_list; do
   file_path=$root_path/$file
   eval "$lint_cmd$file_path"
   exit_code=$(($exit_code + $?))
