@@ -1,22 +1,17 @@
 module.exports = {
   root: true,
   env: {
-    es6: true,
-    node: true,
     browser: true,
-    commonjs: true
+    commonjs: true,
+    es2021: true,
+    node: true
   },
-  extends: [
-    'plugin:vue/vue3-essential',
-    'plugin:vue/vue3-strongly-recommended'
-  ],
+  extends: ['eslint:recommended', 'plugin:vue/essential'],
   parserOptions: {
-    parser: '@babel/eslint-parser',
-    requireConfigFile: false,
-    sourceType: 'module'
+    ecmaVersion: 12
   },
+  plugins: ['vue'],
   rules: {
-    'vue/singleline-html-element-content-newline': 0,
     'comma-dangle': [
       'error',
       {

@@ -25,7 +25,7 @@ export default defineComponent({
   },
 
   setup(context, props) {
-    console.log(context, props, x)
+    console.log(context, props)
   }
 })
 </script>
