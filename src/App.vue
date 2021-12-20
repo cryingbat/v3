@@ -1,12 +1,12 @@
 <script>
-import { defineComponent } from "@vue/runtime-core"
-import { onMounted } from "vue"
+import { defineComponent } from '@vue/runtime-core'
+import { onMounted } from 'vue'
 export default defineComponent({
   setup() {
     onMounted(() => {
-      localStorage.setItem("lang", "zh")
+      localStorage.setItem('lang', 'zh')
     })
-  },
+  }
 })
 </script>
 

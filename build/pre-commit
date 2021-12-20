@@ -12,7 +12,6 @@ if [ -z "$add_files_list" ]; then
   echo 'nothing changed'
   exit 1
 fi
-echo $add_files_list
 root_path=`pwd`
 lint_cmd="node node_modules/eslint/bin/eslint.js "
 exit_code=0
@@ -26,7 +25,7 @@ done
 echo $exit_code
 if [ $exit_code -gt 0 ];then
   echo "please fixed all errors and then recommit";
-  exit 0;
+  exit 1;
 fi
 
 

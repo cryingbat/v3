@@ -37,7 +37,7 @@ import { reactive, ref, toRefs } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 export default {
-  name: 'Login',
+  name: 'LOGIN',
   setup() {
     const router = useRouter()
     const appName = ref(null)
