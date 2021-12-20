@@ -91,7 +91,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .login-body {
   display: flex;
   justify-content: center;
@@ -99,33 +99,33 @@ export default {
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(25deg, #077f7c, #3aa693, #5ecfaa, #7ffac2);
-}
-.change-lang {
-  position: absolute;
-  right: 25px;
-  top: 25px;
-  cursor: pointer;
-}
-.login-container {
-  width: 420px;
-  height: 400px;
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0px 21px 41px 0px rgba(0, 0, 0, 0.2);
-}
-.head {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 0 20px 0;
-}
-.login-form {
-  width: 70%;
-  margin: 0 auto;
-}
-.login-btn {
-  width: 100%;
-  margin-top: 10px;
+  .change-lang {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    cursor: pointer;
+  }
+  .login-container {
+    width: 420px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 21px 41px 0px rgba(0, 0, 0, 0.2);
+    .head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 0 20px 0;
+    }
+    .login-form {
+      width: 70%;
+      margin: 0 auto;
+      .login-btn {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  }
 }
 </style>
 <style>

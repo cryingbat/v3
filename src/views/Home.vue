@@ -29,45 +29,42 @@ export default defineComponent({
   }
 })
 </script>
-<style scoped>
+<style scoped lang="scss">
 .container {
   height: 100vh;
-}
-.aside {
-  width: 200px !important;
-  background-color: #222832;
-  overflow: hidden;
-  overflow-y: auto;
-  -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none;
-}
-.aside::-webkit-scrollbar {
-  display: none;
-}
-.head {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-}
-
-.head {
-  font-size: 20px;
-  color: #ffffff;
-}
-.line {
-  border-top: 1px solid hsla(0, 0%, 100%, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-.content {
-  display: flex;
-  flex-direction: column;
-  max-height: 100vh;
-  overflow: hidden;
-}
-.main {
-  height: calc(100vh - 100px);
-  overflow: auto;
-  padding: 10px;
+  .aside {
+    width: 200px !important;
+    background-color: #222832;
+    overflow: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      font-size: 20px;
+      color: #ffffff;
+    }
+    .line {
+      border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    overflow: hidden;
+    .main {
+      height: calc(100vh - 100px);
+      overflow: auto;
+      padding: 10px;
+    }
+  }
 }
 </style>
